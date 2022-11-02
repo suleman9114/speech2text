@@ -44,11 +44,7 @@ while True:
     
     sf.write("new_file.wav", d_b, model.sample_rate) 
     sf.write("denoised.wav", d_b1, model.sample_rate)
-    
-    
-    from IPython.display import Audio
-    
-    
+        
     
     scaled = np.int16(d_b1.transpose() / np.max(np.abs(d_b1.transpose())) * 32767)
     
